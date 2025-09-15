@@ -23,7 +23,7 @@ namespace Solucion_Taller_2._Class_Library
             set => _h = ValidateH(value);
         }
 
-        public Triangle(string name, double a, double b, double c, double h) : base(name, a, b)
+        public Triangle(string name, double b, double c, double a, double h) : base(name, a, b)
         {
             C = c;
             H = h;
@@ -32,20 +32,20 @@ namespace Solucion_Taller_2._Class_Library
         private double ValidateC(double c)
         {
             if (c <= 0)
-                throw new ArgumentException("El valor de C debe ser mayor que cero.");
+                throw new ArgumentException("The value of C must be greater than zero.");
             return c;
         }
 
         private double ValidateH(double h)
         {
             if (h <= 0)
-                throw new ArgumentException("El valor de H debe ser mayor que cero.");
+                throw new ArgumentException("The value of H must be greater than zero.");
             return h;
         }
 
         public override double GetArea() => (C * H) / 2;
 
-        // Aquí el perímetro depende del diagrama; pongo un ejemplo genérico
+        
         public override double GetPerimeter() => A + B + C;
     }
 }

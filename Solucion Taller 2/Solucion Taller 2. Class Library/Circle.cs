@@ -8,10 +8,10 @@ namespace Solucion_Taller_2._Class_Library
 {
     public class Circle : GeometricFigure
     {
-        // Atributo privado
+        // Private attribute
         private double _r;
 
-        // Propiedad pública para acceder al radio
+        //  Public property to access the radius
         public double R
         {
             get => _r;
@@ -21,18 +21,18 @@ namespace Solucion_Taller_2._Class_Library
         // Constructor
         public Circle(string name, double radius) : base(name)
         {
-            R = radius; // usa la propiedad, que valida el valor
+            R = radius; 
         }
 
-        // Método privado para validar el radio
+        // Private method to validate the radius
         private double ValidateR(double r)
         {
             if (r <= 0)
-                throw new ArgumentException("El radio debe ser mayor que cero.");
+                throw new ArgumentException("The radius must be greater than zero.");
             return r;
         }
 
-        // Implementación de los métodos abstractos
+        // Implementation of abstract methods
         public override double GetArea() => Math.PI * _r * _r;
 
         public override double GetPerimeter() => 2 * Math.PI * _r;

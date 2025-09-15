@@ -16,8 +16,8 @@ namespace Solucion_Taller_2._Class_Library
             set => _d = ValidateD(value);
         }
 
-        public Trapeze(string name, double a, double b, double c, double h, double d)
-            : base(name, a, b, c, h)
+        public Trapeze(string name, double b, double c, double h, double a, double d)
+            : base(name, h, c, b, a)
         {
             D = d;
         }
@@ -25,7 +25,7 @@ namespace Solucion_Taller_2._Class_Library
         private double ValidateD(double d)
         {
             if (d <= 0)
-                throw new ArgumentException("El valor de D debe ser mayor que cero.");
+                throw new ArgumentException("The value of D must be greater than zero.");
             return d;
         }
 

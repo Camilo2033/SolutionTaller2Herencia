@@ -27,7 +27,7 @@ namespace  Solucion_Taller_2._Class_Library
                 Console.WriteLine(figure);
             }
 
-            Console.WriteLine("\nPresione cualquier tecla para salir...");
+            Console.WriteLine("\nPress any key to exit...");
             Console.ReadKey();
         }
     }

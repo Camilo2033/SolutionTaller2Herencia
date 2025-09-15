@@ -2,7 +2,7 @@
 {
     public abstract class GeometricFigure
     {
-        // Propiedad común
+       
         public string Name { get; set; }
 
         protected GeometricFigure(string name)
@@ -10,11 +10,11 @@
             Name = name;
         }
 
-        // Métodos abstractos que deben implementar las clases hijas
+       // Abstract methods that must be implemented by the child classes
         public abstract double GetArea();
         public abstract double GetPerimeter();
 
-        // Método ToString sobrescrito para imprimir resultados
+        // Overridden ToString method to print results
         public override string ToString()
         {
             return $"{Name,-12} => Area.....: {GetArea(),10:F5}   Perimeter: {GetPerimeter(),10:F5}";

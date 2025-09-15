@@ -16,7 +16,7 @@ namespace Solucion_Taller_2._Class_Library
             set => _h = ValidateH(value);
         }
 
-        public Parallelogram(string name, double a, double b, double h) : base(name, a, b)
+        public Parallelogram(string name, double b, double a, double h) : base(name, a, b)
         {
             H = h;
         }
@@ -24,7 +24,7 @@ namespace Solucion_Taller_2._Class_Library
         private double ValidateH(double h)
         {
             if (h <= 0)
-                throw new ArgumentException("El valor de H debe ser mayor que cero.");
+                throw new ArgumentException("The value of H must be greater than zero.");
             return h;
         }
 

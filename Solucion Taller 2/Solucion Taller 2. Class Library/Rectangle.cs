@@ -24,7 +24,7 @@ namespace Solucion_Taller_2._Class_Library
         private double ValidateB(double b)
         {
             if (b <= 0)
-                throw new ArgumentException("El valor de B debe ser mayor que cero.");
+                throw new ArgumentException("The value of B must be greater than zero.");
             return b;
         }
 
